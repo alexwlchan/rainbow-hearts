@@ -118,6 +118,10 @@ flags = {
         "stripes": ["#55CDFC", "#F7A8B8", "#DDD", "#F7A8B8", "#55CDFC"],
         "url": "https://en.wikipedia.org/wiki/Transgender_flags",
     },
+    "black trans": {
+        "stripes": ["#55CDFC", "#F7A8B8", to_pastel("#000000"), "#F7A8B8", "#55CDFC"],
+        "url": "https://en.wikipedia.org/wiki/File:Black_trans_flag.svg",
+    },
     "lesbian": {
         "stripes": [
             "#B60063",
