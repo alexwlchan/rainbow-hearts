@@ -33,7 +33,7 @@
     <p>
       <a href="{{ url_for('index') }}">surprise me!</a> •
       <a href="{{ url_for('index', left_flag=flags['left_flag'] | name, right_flag=flags['right_flag'] | name)}}">permalink</a> •
-      <a href="data:image/svg+xml;base64,{{ svg_xml | base64 }}">download as svg</a>
+      <a href="data:image/svg+xml;base64,{{ svg_xml | base64 }}" download="hearts_{{ flags['left_flag'] | name }}_{{ flags['right_flag'] | name }}.svg">download as svg</a>
     </p>
     <p>
       see also: <a href="http://rainbow-valknuts.glitch.me">rainbow valknuts</a>
