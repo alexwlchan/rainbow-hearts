@@ -30,9 +30,9 @@ def middle_stripes(stripes):
         return [stripes[len(stripes) // 2]]
 
 
-def create_hearts(*, flag_left, flag_right):
+def get_hearts_svg(**kwargs):
     env = Environment(
-        loader=FileSystemLoader("."), autoescape=select_autoescape(["xml"])
+        loader=FileSystemLoader("templates"), autoescape=select_autoescape(["xml"])
     )
 
     env.filters["inner_stripes"] = inner_stripes
@@ -41,22 +41,4 @@ def create_hearts(*, flag_left, flag_right):
 
     template = env.get_template("hearts_rainbow_template.svg")
 
-    return template.render(flag_left=flag_left, flag_right=flag_right, stroke_width=24)
-
-
-if __name__ == "__main__":
-    os.makedirs("_out", exist_ok=True)
-
-    svg_xml = create_hearts(
-        flag_left=random.choice(list(flags.items())),
-        flag_right=random.choice(list(flags.items())),
-    )
-
-    out_path = os.path.join("_out", f"rainbow-{secrets.token_hex(6)}.svg")
-
-    with open(out_path, "w") as outfile:
-        outfile.write(svg_xml)
-
-    print(out_path)
-    os.system(f"open -a safari {out_path}")
-
+    return template.render(**kwargs, stroke_width=24)
