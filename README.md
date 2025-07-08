@@ -1,3 +1,9 @@
+**Note, 8 July 2025:** This repo has a Python app that I ran on Glitch from 2021 until [Glitch shut down in July 2025](https://blog.glitch.com/post/changes-are-coming-to-glitch).
+
+I've moved it to <https://alexwlchan.net/fun-stuff/rainbow-hearts/>, and the source code is now in my alexwlchan.net repo: <https://github.com/alexwlchan/alexwlchan.net/tree/main/src/fun-stuff/rainbow-hearts>
+
+---
+
 # rainbow-hearts
 
 This is a tiny web app for generating rainbow hearts, based on [a graphic I made for Valentine's Day](https://twitter.com/alexwlchan/status/1360919253738790915):
